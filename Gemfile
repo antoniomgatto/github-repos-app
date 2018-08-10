@@ -24,6 +24,10 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+# Ruby client that supports all of the GitHub
+gem 'github_api', '~> 0.18.2'
+# A library for bulk inserting data using ActiveRecord.
+gem 'activerecord-import', '~> 0.25.0'
 
 group :development, :test do
 end
