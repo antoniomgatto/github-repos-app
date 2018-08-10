@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180810030418) do
+ActiveRecord::Schema.define(version: 20180810125422) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20180810030418) do
     t.string "avatar_url"
     t.string "gravatar_id"
     t.string "url"
+    t.string "html_url"
   end
 
   create_table "repositories", force: :cascade do |t|

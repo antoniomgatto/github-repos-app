@@ -33,7 +33,7 @@ class SaveGithubRepositoriesService
     end
 
     def owner_params(item)
-      item['owner'].to_h.slice('login','node_id','avatar_url','gravatar_id','url')
+      item['owner'].to_h.slice('login','node_id','avatar_url','gravatar_id','html_url','url')
     end
 
     def new_repository(item)
