@@ -113,7 +113,7 @@
 
 <p>
   <strong>Avatar:</strong>
-  <%= image_tag @repository.owner.avatar_url, size: 100  %>
+  <%= image_tag @repository.owner.avatar_url, size: 100 unless @repository.owner.avatar_url.nil? %>
 </p>
 
 <p>
