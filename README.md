@@ -24,3 +24,10 @@ docker exec -it github-app bash
 rake db:drop db:create db:migrate
 foreman start
 ```
+
+### Testes
+
+Com o ambiente Docker rodando, execute:
+```bash
+docker exec -it github-app rspec
+```
