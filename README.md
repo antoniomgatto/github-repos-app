@@ -9,9 +9,18 @@ Utiliza:
 
 ### Desenvolvimento com Docker
 
+Criar arquivo .env na raiz do projeto com os seguintes valores:
+
+```
+RACK_ENV=development
+PORT=3000
+```
+
+Executar na raiz do projeto:
+
 ```bash
 ./build.sh
 docker exec -it github-app bash
 rake db:drop db:create db:migrate
-rails s
+foreman start
 ```
