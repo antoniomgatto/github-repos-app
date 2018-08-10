@@ -1,4 +1,5 @@
 class RepositoriesController < ApplicationController
+  before_action :set_languages
   before_action :set_repository, only: [:show]
   before_action :set_repositories, only: [:index]
   before_action :destroy_all,:fetch_repositories, only: [:search]
@@ -14,6 +15,10 @@ class RepositoriesController < ApplicationController
   end
 
   private
+    def set_languages
+      @languages = ['ruby','java','javascript','php','groovy']
+    end
+
     def set_repository
       @repository = Repository.find(params[:id])
     end
@@ -27,6 +32,6 @@ class RepositoriesController < ApplicationController
     end
 
     def fetch_repositories
-      FetchGithubRepositoriesWorker.perform_async(['ruby','java','javascript','php','groovy'])
+      FetchGithubRepositoriesWorker.perform_async(@languages)
     end
 end
