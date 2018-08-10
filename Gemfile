@@ -28,6 +28,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'github_api', '~> 0.18.2'
 # A library for bulk inserting data using ActiveRecord.
 gem 'activerecord-import', '~> 0.25.0'
+# Use Redis adapter to run Action Cable in production
+gem 'redis', '~> 4.0', '>= 4.0.1'
+# Simple, efficient background processing for Ruby.
+gem 'sidekiq', '~> 5.1', '>= 5.1.3'
 
 group :development, :test do
 end

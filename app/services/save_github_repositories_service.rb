@@ -8,8 +8,12 @@ class SaveGithubRepositoriesService
   end
 
   def perform
-    fetch_repositories
-    save_repositories
+    begin
+      fetch_repositories
+      save_repositories
+    rescue
+      false
+    end
   end
 
   private
@@ -35,7 +39,6 @@ class SaveGithubRepositoriesService
     def new_repository(item)
       repository = Repository.new(repository_params(item))
       @owners << repository.build_owner(owner_params(item))
-      Rails.logger.debug "repository #{@owners.size}"
       repository
     end
 
