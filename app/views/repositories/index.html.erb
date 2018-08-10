@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Repositories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Full name</th>
+      <th>Html url</th>
+      <th>Owner</th>
+      <th>Language</th>
+      <th>Stargazers count</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @repositories.each do |repository| %>
+      <tr>
+        <td><%= repository.full_name %></td>
+        <td><%= repository.html_url %></td>
+        <td><%= repository.owner.login %></td>
+        <td><%= repository.language %></td>
+        <td><%= repository.stargazers_count %></td>
+        <td><%= link_to 'Show', repository %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

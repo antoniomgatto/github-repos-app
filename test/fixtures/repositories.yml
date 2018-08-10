@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  node_id: MyString
+  name: MyString
+  full_name: MyString
+  private_repo: false
+  html_url: MyString
+  description: MyString
+  fork: false
+  url: MyString
+  created_at: 2018-08-10 02:36:46
+  updated_at: 2018-08-10 02:36:46
+  pushed_at: 2018-08-10 02:36:46
+  homepage: MyString
+  size: 1
+  stargazers_count: 1
+  watchers_count: 1
+  language: MyString
+  forks_count: 1
+  open_issues_count: 1
+  master_branch: MyString
+  default_branch: MyString
+  score: 9.99
+
+two:
+  node_id: MyString
+  name: MyString
+  full_name: MyString
+  private_repo: false
+  html_url: MyString
+  description: MyString
+  fork: false
+  url: MyString
+  created_at: 2018-08-10 02:36:46
+  updated_at: 2018-08-10 02:36:46
+  pushed_at: 2018-08-10 02:36:46
+  homepage: MyString
+  size: 1
+  stargazers_count: 1
+  watchers_count: 1
+  language: MyString
+  forks_count: 1
+  open_issues_count: 1
+  master_branch: MyString
+  default_branch: MyString
+  score: 9.99
