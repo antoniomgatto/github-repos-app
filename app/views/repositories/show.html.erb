@@ -17,12 +17,12 @@
 
 <p>
   <strong>Private repo:</strong>
-  <%= @repository.private_repo %>
+  <%= boolean_format(@repository.private_repo) %>
 </p>
 
 <p>
   <strong>Html url:</strong>
-  <%= @repository.html_url %>
+    <%= link_to nil, @repository.html_url unless @repository.html_url.nil? %>
 </p>
 
 <p>
@@ -37,7 +37,7 @@
 
 <p>
   <strong>Url:</strong>
-  <%= @repository.url %>
+  <%= link_to nil, @repository.url unless @repository.url.nil? %>
 </p>
 
 <p>
@@ -57,7 +57,7 @@
 
 <p>
   <strong>Homepage:</strong>
-  <%= @repository.homepage %>
+  <%= link_to nil, @repository.homepage unless @repository.homepage %>
 </p>
 
 <p>
@@ -103,6 +103,32 @@
 <p>
   <strong>Score:</strong>
   <%= @repository.score %>
+</p>
+
+<h2>Owner</h2>
+<p>
+  <strong>Node ID:</strong>
+  <%= @repository.owner.node_id %>
+</p>
+
+<p>
+  <strong>Avatar:</strong>
+  <%= image_tag @repository.owner.avatar_url, size: 100  %>
+</p>
+
+<p>
+  <strong>Login:</strong>
+  <%= @repository.owner.login %>
+</p>
+
+<p>
+  <strong>Html Url:</strong>
+  <%= link_to nil, @repository.owner.html_url unless @repository.owner.html_url.nil? %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= link_to nil, @repository.owner.url unless @repository.owner.url.nil? %>
 </p>
 
 <%= link_to 'Back', repositories_path %>
