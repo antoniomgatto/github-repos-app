@@ -1,0 +1,25 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: github-app_development
+  host: db
+  port: 5432
+  user: postgres
+  password: password
+
+test:
+  <<: *default
+  database: github-app_test
+  host: db
+  port: 5432
+  user: postgres
+  password: password
+
+production:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
+
