@@ -34,6 +34,16 @@ gem 'redis', '~> 4.0', '>= 4.0.1'
 gem 'sidekiq', '~> 5.1', '>= 5.1.3'
 
 group :development, :test do
+  # rspec-rails is a testing framework for Rails 3+.
+  gem 'rspec-rails', '~> 3.7'
+  # Collection cardinality matchers, extracted from rspec-expectations
+  gem 'rspec-collection_matchers', '~> 1.1', '>= 1.1.3'
+  # Making tests easy on the fingers and eyes
+  gem 'shoulda-matchers', '~> 3.1', '>= 3.1.2'
+  # factory_girl_rails provides integration between factory_girl and rails 3 or newer (currently just automatic factory definition loading)
+  gem 'factory_bot_rails', '~> 4.10'
+  # Strategies for cleaning databases in Ruby.
+  gem 'database_cleaner', '~> 1.7'
 end
 
 group :development do
