@@ -11,7 +11,9 @@ class FetchGithubRepositoriesWorker
       end
       ImportRepositoriesService.new({repositories: repositories}).perform
       notify(true)
-    rescue
+    rescue => e
+      Rails.logger.error e.message
+      e.backtrace.each { |line| Rails.logger.error line }
       notify(false)
     end
   end
