@@ -33,7 +33,10 @@ gem 'redis', '~> 4.0', '>= 4.0.1'
 # Simple, efficient background processing for Ruby.
 gem 'sidekiq', '~> 5.1', '>= 5.1.3'
 
+
 group :development, :test do
+  # Brings back `assigns` and `assert_template` to your Rails tests
+  gem 'rails-controller-testing'
   # rspec-rails is a testing framework for Rails 3+.
   gem 'rspec-rails', '~> 3.7'
   # Collection cardinality matchers, extracted from rspec-expectations
